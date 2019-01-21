@@ -59,6 +59,8 @@ a:active {
 <a href="utils/setSubMenu2.php" class="button button1"> Alt Menu2 Düzenle </a>
 <a href="utils/setSubMenu3.php" class="button button1"> Alt Menu3 Düzenle </a><br>
 <a href="utils/addQuest.php" class="button button1"> <h1>Soru Ekle</h1> </a>
+<hr>
+<a href="utils/outputJson.php" class="button button1"> <h1>Çıktı Al</h1> </a>
 
     
 </body>

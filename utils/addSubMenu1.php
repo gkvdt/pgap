@@ -49,7 +49,7 @@ if($_GET){
 
         while($row = $result->fetch_assoc()){
       ?>
-        <option value="<?php echo $row['submenu_id'] ?>"><?php echo $row['menu_title'] ?></option>
+        <option value="<?php echo $row['menu_id'] ?>"><?php echo $row['menu_title'] ?></option>
       <?php } ?>
       </select>
   

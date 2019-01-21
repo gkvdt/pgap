@@ -75,7 +75,8 @@ if(@$_SESSION['submenu_id3']!="" || @$_SESSION['submenu_id3'] != null){
 ?>
 
 <p> Soru ID = 
-<?php echo $questMenuId ;?>
+<?php echo $questMenuId . '     ===>  ' ;?>
+<a href="showMe.php?kategori_id=<?php echo $questMenuId; ?>">Bu Kategorideki Soruları Göster</a>
 </p>
 <?php echo $line . "<br>";?>
 
@@ -85,7 +86,7 @@ if(@$_SESSION['submenu_id3']!="" || @$_SESSION['submenu_id3'] != null){
         
 <form name="myForm" action="addQuestt.php" method="get" onsubmit="return chechEmpty();">
 <input type="hidden" name="menu_id" value="<?php echo $questMenuId; ?>">
-        <input type="text" name="soru" placeholder="Soru" autocomplete="off">
+       Soru <input type="text" name="soru" placeholder="Soru" autocomplete="off">
         <input type="text" name="a" placeholder="A şıkkı" autocomplete="off">
         <input type="text" name="b" placeholder="B şıkkı" autocomplete="off">
         <input type="text" name="c" placeholder="C şıkkı" autocomplete="off">

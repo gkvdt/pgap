@@ -13,10 +13,15 @@
         if($_GET['aciklama']!=null || $_GET['aciklama']!=""){
             $sql = 'INSERT INTO sorular ( menu_id,soru,a,b,c,d,e,cevap,aciklama) VALUES ("'.
             $_GET['menu_id'] .'","'.$_GET['soru'] .'","'.$_GET['a'] .'","'.$_GET['b'] .'","'.$_GET['c'] .'","'.$_GET['d'] .'","'.$_GET['e'] .'","'.$_GET['cevap'] .'","'.$_GET['aciklama'] .'")';
+            echo $sql;
+            mQuery($sql);
         }else{
 
             $sql = 'INSERT INTO sorular ( menu_id,soru,a,b,c,d,e,cevap) VALUES ("'.
             $_GET['menu_id'] .'","'.$_GET['soru'] .'","'.$_GET['a'] .'","'.$_GET['b'] .'","'.$_GET['c'] .'","'.$_GET['d'] .'","'.$_GET['e'] .'","'.$_GET['cevap'] .'")';
+            echo $sql;
+            mQuery($sql);
         }
+        header('Location: addQuestp.php');
 
     }
