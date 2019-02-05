@@ -47,4 +47,88 @@
         }
 
     }
+
+
+    function getUpData($table, $upMenuId){
+      $result = array();
+      $result[0]="asd";
+
+
+      switch ($table) {
+        case 0:
+          $result = fromMenu($upMenuId);
+          break;
+        case 1:
+          $result = fromSub1Menu($upMenuId);
+          break;
+        case 2:
+          $result = fromSub2Menu($upMenuId);
+          break;
+        case 3:
+          $result = fromSub3Menu($upMenuId);
+          break;
+      }
+
+      return @$result[0];
+    }
+
+    function fromMenu($id ,$arr = array()){
+      global $conn;
+
+      $sql = 'SELECT * FROM menu WHERE menu_id='.$id;
+      $result = $conn->query($sql);
+
+      $temp = $arr;
+
+
+
+      while($row = $result->fetch_assoc()){
+        $temp[0] = $row['menu_title']. " > " .@$temp[0];
+        $temp[1] = $row['menu_id'];
+      }
+
+      return $temp;
+    }
+
+
+    function fromSub1Menu($id ,$arr = array()){
+      global $conn;
+
+      $sql = 'SELECT * FROM submenu1 WHERE submenu_id='.$id;
+      $result = $conn->query($sql);
+
+      $temp = $arr;
+
+
+
+      while($row = $result->fetch_assoc()){
+        $temp[0] = $row['submenu_title']. " > " .@$temp[0];
+        $temp[1] = $row['menu_id'];
+      }
+
+      $temp = @fromMenu($temp[1],$temp);
+
+      return $temp;
+    }
+
+
+        function fromSub2Menu($id ,$arr = array()){
+          global $conn;
+
+          $sql = 'SELECT * FROM submenu2 WHERE submenu_id='.$id;
+          $result = $conn->query($sql);
+
+          $temp = $arr;
+
+
+
+          while($row = $result->fetch_assoc()){
+            $temp[0] = $row['submenu_title']. " > " .@$temp[0];
+            $temp[1] = $row['menu_id'];
+          }
+
+          $temp = fromSub1Menu($temp[1],$temp);
+
+          return $temp;
+        }
 ?>

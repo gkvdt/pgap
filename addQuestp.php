@@ -1,24 +1,5 @@
 <?php
-include_once "../Database/Database.php";
-include_once "session.php";
-
-
-?>
-
-<html>
-  <head>
-  <meta charset="UTF-8"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="../css/stil.css">
-    <script src="../js/script.js"></script>
-  </head>
-  <body>
-  <a href="../" class="button button1"> Ana Menü </a>
-    <div>
-
-
-
-<?php
+include_once 'head.php';
 $myWhere;
 $questMenuId="";
 $line="";
@@ -71,39 +52,30 @@ if(@$_SESSION['submenu_id3']!="" || @$_SESSION['submenu_id3'] != null){
     }
 }
 
-#echo $myWhere . "<br>";
-?>
+  echo $line . "<br>";?>
 
-<p> Soru ID =
-<?php echo $questMenuId . '     ===>  ' ;?>
-<a href="showMe.php?kategori_id=<?php echo $questMenuId; ?>">Bu Kategorideki Soruları Göster</a>
-</p>
-<?php echo $line . "<br>";?>
 
-</div>
+<br>
 <hr>
-<div>
-
 <form name="myForm" action="addQuestt.php" method="get" onsubmit="return chechEmpty();">
 <input type="hidden" name="menu_id" value="<?php echo $questMenuId; ?>">
-       Soru <input type="text" name="soru" placeholder="Soru" autocomplete="off">
-        <input type="text" name="a" placeholder="A şıkkı" autocomplete="off">
-        <input type="text" name="b" placeholder="B şıkkı" autocomplete="off">
-        <input type="text" name="c" placeholder="C şıkkı" autocomplete="off">
-        <input type="text" name="d" placeholder="D şıkkı" autocomplete="off">
-        <input type="text" name="e" placeholder="E şıkkı" autocomplete="off">
-        <input type="text" name="aciklama" placeholder="Soru Açıklaması (Boş Bırakılabilir)" autocomplete="off">
-        <select name="cevap">
-            <option value="1">A</option>
-            <option value="2">B</option>
-            <option value="3">C</option>
-            <option value="4">D</option>
-            <option value="5">E</option>
+ <input type="text" name="soru" placeholder="Soru" autocomplete="off"><br>
+ <input type="text" name="a" placeholder="A şıkkı" autocomplete="off"><br>
+ <input type="text" name="b" placeholder="B şıkkı" autocomplete="off"><br>
+ <input type="text" name="c" placeholder="C şıkkı" autocomplete="off"><br>
+ <input type="text" name="d" placeholder="D şıkkı" autocomplete="off"><br>
+ <input type="text" name="e" placeholder="E şıkkı" autocomplete="off"><br>
+ <input type="text" name="aciklama" placeholder="Soru Açıklaması (Boş Bırakılabilir)" autocomplete="off"><br>
+ <select name="cevap"><br>
+     <option value="1">A</option>
+     <option value="2">B</option>
+     <option value="3">C</option>
+     <option value="4">D</option>
+     <option value="5">E</option>
 
-        </select>
-        <input type="submit">
-      </form>
+ </select><br>
+ <input class="btn btn-large"  style="margin-left:170px;"type="submit" value="Ekle">
+</form>
 
-</div>
-  </body>
-</html>
+
+<?php include_once 'footer.php'; ?>

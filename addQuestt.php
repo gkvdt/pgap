@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-    include_once '../Database/Database.php';
+    include_once 'Database/Database.php';
 
     if(@$_GET['soru'] !=null ||@$_GET['soru'] !="" ||
 @$_GET['a'] !=null ||@$_GET['a'] !="" ||
