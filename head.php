@@ -1,6 +1,6 @@
 <?php
   include_once "Database/Database.php";
-  include_once "utils/session.php";
+  include_once "util/session.php";
 
 ?>
 
@@ -51,7 +51,7 @@
 
 
                             <ul class="widget widget-menu unstyled">
-                              <li><a href="addQuest.php"><i class="menu-icon icon-bold"></i> Çıktı Al </a></li>
+                              <li><a href="output.php"><i class="menu-icon icon-bold"></i> Çıktı Al </a></li>
 
                             </ul>
                             <!--/.widget-nav-->

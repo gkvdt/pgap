@@ -23,6 +23,7 @@
     <td><?php echo $row['menu_title']; ?></td>
     <td><a href="setMenu.php?submenu1_id=<?php echo $row['submenu_id']; ?>" class="button2 button1"> Düzenle </a></td>
     <td><a href="util/delete/menu.php?menu_id=<?php echo $row['menu_id']; ?>" class="button2 button1"> Sil </a></td>
+
   </tr>
     <?php } ?>
 </table>
@@ -50,8 +51,9 @@
   <tr>
     <td><?php echo getUpData(0,$row['menu_id']); ?></td>
     <td><?php echo $row['submenu_title']; ?></td>
-    <td><a href="setMenu.php?submenu1_id=<?php echo $row['submenu_id']; ?>" class="button2 button1"> Düzenle </a></td>
-    <td><a href="deleteMenu.php?submenu1_id=<?php echo $row['submenu_id']; ?>" class="button2 button1"> Sil </a></td>
+
+    <td><a href="#" class="button2 button1"> Düzenle </a></td>
+    <td><a href="#" class="button2 button1"> Sil </a></td>
   </tr>
     <?php } ?>
 </table>
@@ -82,8 +84,8 @@
   <tr>
     <td><?php echo getUpData(1,$row['menu_id']); ?></td>
     <td><?php echo $row['submenu_title']; ?></td>
-    <td><a href="setMenu.php?submenu1_id=<?php echo $row['submenu_id']; ?>" class="button2 button1"> Düzenle </a></td>
-    <td><a href="deleteMenu.php?submenu1_id=<?php echo $row['submenu_id']; ?>" class="button2 button1"> Sil </a></td>
+    <td><a href="#" class="button2 button1"> Düzenle </a></td>
+    <td><a href="#" class="button2 button1"> Sil </a></td>
   </tr>
     <?php } ?>
 </table>
@@ -111,8 +113,8 @@
   <tr>
     <td><?php echo getUpData(2,$row['menu_id']); ?></td>
     <td><?php echo $row['submenu_title']; ?></td>
-    <td><a href="setMenu.php?submenu1_id=<?php echo $row['submenu_id']; ?>" class="button2 button1"> Düzenle </a></td>
-    <td><a href="deleteMenu.php?submenu1_id=<?php echo $row['submenu_id']; ?>" class="button2 button1"> Sil </a></td>
+    <td><a href="#" class="button2 button1"> Düzenle </a></td>
+    <td><a href="#" class="button2 button1"> Sil </a></td>
   </tr>
     <?php } ?>
 </table>
