@@ -8,11 +8,14 @@ if(@$_GET['menu_id']!=null || @$_GET['menu_id'] !=""){
 
     deleteSub1($_GET['menu_id']);
 
-    $sql = 'DELETE FROM sorular WHERE menu_id="'.$_GET['menu_id'].'-*"';
+    $sql = 'DELETE FROM sorular WHERE menu_id LIKE "'.$_GET['menu_id'].'-%"';
     mQuery($sql);
 
     header('Location: ../../index.php');
 }
+
+// soruları siliyormuydu ???
+
 
 function deleteSub1($id){
   global $conn;

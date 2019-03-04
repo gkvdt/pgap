@@ -12,6 +12,8 @@ if(!$_GET){
 
 
     if(@$_GET['buton']=="ekle"){
+
+      $havesub=true;
         if($_GET['menu_id']!=null || $_GET['menu_id']!="" ){
             $menu_id=$_GET['menu_id'];
             $_SESSION['menu_id']=$menu_id;
@@ -121,8 +123,8 @@ if(!$_GET){
     <option
     <?php if(@$row2['menu_id']==@$_GET['menu_id']){
       echo ' selected ';
-      if($row0['child']!=0){
-        $sub1have=true;
+      if($row2['child']!=0){
+        $sub2have=true;
       }
     }
      ?>
