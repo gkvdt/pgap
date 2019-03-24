@@ -18,6 +18,8 @@
         <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
         <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
             rel='stylesheet'>
+        <script src="https://cdn.ckeditor.com/4.11.3/basic/ckeditor.js"></script>
+
             <script src="js/script.js"></script>
     </head>
     <body>

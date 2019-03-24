@@ -59,7 +59,7 @@ if(@$_SESSION['submenu_id3']!="" || @$_SESSION['submenu_id3'] != null){
 <hr>
 <form name="myForm" action="addQuestt.php" method="get" onsubmit="return chechEmpty();">
 <input type="hidden" name="menu_id" value="<?php echo $questMenuId; ?>">
- <input type="text" name="soru" placeholder="Soru" autocomplete="off"><br>
+<textarea type="text" name="soru" placeholder="Soru" autocomplete="off"></textarea><br>
  <input type="text" name="a" placeholder="A şıkkı" autocomplete="off"><br>
  <input type="text" name="b" placeholder="B şıkkı" autocomplete="off"><br>
  <input type="text" name="c" placeholder="C şıkkı" autocomplete="off"><br>
@@ -76,6 +76,9 @@ if(@$_SESSION['submenu_id3']!="" || @$_SESSION['submenu_id3'] != null){
  </select><br>
  <input class="btn btn-large"  style="margin-left:170px;"type="submit" value="Ekle">
 </form>
-
+    <script>
+    
+        CKEDITOR.replace('soru');
+    </script>
 
 <?php include_once 'footer.php'; ?>

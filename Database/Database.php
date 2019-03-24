@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "kpss";
+    $dbname = "dynamicquiz";
 
     // Create connection
     $conn = new mysqli($servername, $username, $password,$dbname);
